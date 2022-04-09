@@ -1,0 +1,24 @@
+{{#if url}}
+  <form action='/edit/{{url._id}}' method='post'>
+    <input type='hidden' name='_csrf' value={{csrfToken}} />
+    <input
+      type='text'
+      name='original'
+      value={{url.original}}
+      class='form-control my-2'
+      placeholder='Insert the URL'
+    />
+    <button type='submit' class='btn btn-warning w-100 mb-2'>Edit</button>
+  </form>
+{{else}}
+  <form action='/' method='post'>
+    <input type='hidden' name='_csrf' value={{csrfToken}} />
+    <input
+      type='text'
+      name='original'
+      class='form-control my-2'
+      placeholder='Insert the URL'
+    />
+    <button type='submit' class='btn btn-primary w-100 mb-2'>Submit</button>
+  </form>
+{{/if}}

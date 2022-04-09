@@ -1,0 +1,9 @@
+<article class="card mb-2">
+  <div class="card-body">
+    <p>original URL: {{this.original}}</p>
+    <p>short URL: {{this.short}}</p>
+    <a href="/delete/{{this._id}}" class="btn btn-danger">delete</a>
+    <a href="/edit/{{this._id}}"  class="btn btn-warning">edit</a>
+    <button data-short="{{this.short}}" class="btn btn-info">copy</button>
+  </div>
+</article>
